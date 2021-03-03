@@ -1,7 +1,7 @@
 #include "std_lib_facilities.h"
 
 /*
-   Ex.3: Program that inputs two integer numbers, that stores them in two int variables va1 and var2. It determines smaler and larger number.
+   Ex.4: Program that inputs two integer numbers, that stores them in two int variables va1 and var2. It determines smaler and larger number.
    Then calculates: sum, difference, product and ratio and reports them to the user. 
 */
 int main()
