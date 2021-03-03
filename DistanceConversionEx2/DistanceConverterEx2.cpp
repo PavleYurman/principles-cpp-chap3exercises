@@ -1,22 +1,28 @@
 #include "std_lib_facilities.h"
 
 /*
-   Ex.4: Program that inputs two integer numbers, that stores them in two int variables va1 and var2. It determines smaler and larger number.
-   Then calculates: sum, difference, product and ratio and reports them to the user. 
+   Ex.4 + 5: Program that inputs two integer numbers, that stores them in two int variables va1 and var2. It determines smaler and larger number.
+   Then calculates: sum, difference, product and ratio and reports them to the user.
+   Ex. 5: change the type of variables to double and ask the user to input floating point number. What is the difference?
+   I see no difference.
 */
 int main()
 {
+	// Ex. 4 + 5
 	// Determine smaler and larger number
-	int val1{ 0 }, val2{ 0 };
-	cout << "Input two integer numbers." << endl;
+	/*int val1{ 0 }, val2{ 0 };*/
+	double val1{ 0.0 }, val2{ 0.0 };
+	cout << "Input two floating point numbers." << endl;
 	cin >> val1 >> val2;
 	string largerVal = to_string(val1);	
-	string ratio = to_string((double)val1 / val2) + " : " + to_string((double)val2 / val2);
+	//string ratio = to_string((double)val1 / val2) + " : " + to_string((double)val2 / val2);
+	string ratio = to_string(val1 / val2) + " : " + to_string(val2 / val2);
 	if (val2 > val1)
 	{
 		largerVal = to_string(val2);
 		cout << largerVal << " is larger value." << endl;
-		ratio = to_string((double)val1 / val1) + " : " + to_string((double)val2 / val1);
+		//ratio = to_string((double)val1 / val1) + " : " + to_string((double)val2 / val1);
+		ratio = to_string(val1 / val1) + " : " + to_string(val2 / val1);
 	}
 	else if (val2 == val1)
 	{
@@ -24,9 +30,9 @@ int main()
 		ratio = " 1 : 1 ";
 	}
 	// Determine sum, difference, product and ratio of val1 and val2
-	int sum = val1 + val2;
-	int difference = abs(val1 - val2);
-	int product = val1 * val2;
+	double sum = val1 + val2;
+	double difference = abs(val1 - val2);
+	double product = val1 * val2;
 	// Output
 	cout << val1 << " + " << val2 << " = " << sum << endl;
 	cout << "| " << val1 << " - " << val2 << " | = " << difference << endl;
